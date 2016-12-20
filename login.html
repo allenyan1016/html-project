@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css">
+	<script type="text/javascript" src="dist/js/jquery.min.js"></script>
+	<script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		html {
+			background:url(http://pic1.win4000.com/wallpaper/f/579073fe0c543.jpg) no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+		.container {
+			width:500px;
+			height:300px;
+			margin:100px 433px 0 433px;
+			border-radius:15px;
+			border:1px solid black;
+			padding:0;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<h1>Do U Wanna Come In?</h1>
+	<p>this is a special place</p>
+	<p>if u wanna come in</p>
+	<p>so...</p>
+	<!-- 表单 begin -->
+	<form role="form" class="margin-base-vertical">
+		<div class="form-group">
+			<label for="zhanghao" class="col-sm-2 control-label">账号：</label>
+			<div class="col-sm-10">
+				<input type="text" name="" id="zhanghao" class="form-control col-sm-10" placeholder="...">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="mima" class="col-sm-2 control-label">密码：</label>
+			<div class="col-sm-10">
+				<input type="password" name="" id="mima" class="form-control" placeholder="...">
+			</div>
+		</div>
+		<div class="text-center">
+			<button type="submit" class="btn btn-success" id="login">登录</button>
+		</div>
+	</form>
+	<!-- 表单 end -->
+	<script type="text/javascript">
+		$("#login").click(function(){
+			if($("#zhanghao").value()=="1" && $("#mima").value()=="1"){
+				window.open("index.html");			}
+		})
+	</script>
+</div>
+</body>
+</html>
