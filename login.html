@@ -14,47 +14,53 @@
 			-o-background-size: cover;
 			background-size: cover;
 		}
-		.container {
-			width:500px;
-			height:300px;
+		#form1{
+			width:450px;
+			height:500px;
 			margin:100px 433px 0 433px;
+			float:left;
+			background:white;
 			border-radius:15px;
-			border:1px solid black;
-			padding:0;
+
 		}
 	</style>
 </head>
-<body>
-<div class="container">
-	<h1>Do U Wanna Come In?</h1>
-	<p>this is a special place</p>
-	<p>if u wanna come in</p>
-	<p>so...</p>
+<body id="b1">
 	<!-- 表单 begin -->
-	<form role="form" class="margin-base-vertical">
+	<form class="form-horizontal" role="form" id="form1">
 		<div class="form-group">
-			<label for="zhanghao" class="col-sm-2 control-label">账号：</label>
-			<div class="col-sm-10">
-				<input type="text" name="" id="zhanghao" class="form-control col-sm-10" placeholder="...">
+			<label class="col-sm-2 control-label" for="zhanghao">账号：</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" placeholder="..." id="zhanghao">
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="mima" class="col-sm-2 control-label">密码：</label>
-			<div class="col-sm-10">
-				<input type="password" name="" id="mima" class="form-control" placeholder="...">
+			<div class="col-sm-4">
+				<input type="password" class="form-control" id="mima" placeholder="...">
 			</div>
 		</div>
-		<div class="text-center">
-			<button type="submit" class="btn btn-success" id="login">登录</button>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-success" id="login">提交</button>
+			</div>
 		</div>
 	</form>
 	<!-- 表单 end -->
 	<script type="text/javascript">
-		$("#login").click(function(){
-			if($("#zhanghao").value()=="1" && $("#mima").value()=="1"){
-				window.open("index.html");			}
+		$(function(){
+			var $html=" ";
+			$("#login").click(function(){
+				if($("#zhanghao").val()=="1" && $("#mima").val()=="1"){
+					// window.location="index.html";	
+					window.open("index.html");
+					// $(this).href("index.html");	
+				}else{
+					$html += "<div class='alert alert-danger' role='alert'>输入的账号密码错误!!!</div>";
+					$("#b1").append($html);
+				}
+			})
 		})
 	</script>
-</div>
 </body>
 </html>
